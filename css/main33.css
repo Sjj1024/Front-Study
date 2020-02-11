@@ -1,0 +1,48 @@
+*{
+	border: 0px;
+	margin: 0px;
+}
+
+header{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	font-size: 36px;
+	background: #3366ff;
+	text-align: center;
+	padding: 5px;
+}
+
+header:hover{
+	text-shadow: #000 2px 2px 2px;
+}
+
+/*菜单栏样式*/
+nav{
+	background: #ccc;
+	/*padding:10px;*/
+	height: 40px;
+	line-height: 40px;
+}
+ul{
+	margin-left: 40px;
+	max-width: 80%;
+}
+li>a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+li{
+	display: inline-block;
+	margin-left: 5px;
+	height: 40px;
+	/*padding:5px;*/
+	text-align: center;
+}
+
+li:hover{
+	text-shadow: #fff 2px 2px 2px;
+	background: blue;
+}

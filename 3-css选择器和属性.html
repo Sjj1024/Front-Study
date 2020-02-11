@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是留言板</title>
+	<link rel="stylesheet" type="text/css" href="3-css学习.css">
+	<style type="text/css">
+		.a2{
+			float: left;
+		}
+		#a3{
+			float: right;
+		}
+		#a4{
+			/*能够清除子元素的浮动带来的影响*/
+			overflow: hidden; 
+		}
+	</style>
+</head>
+<body>
+	<div id="a4">
+		<div class="a2">
+			<p>这是留言框区域：</p>
+			<textarea cols="50" rows="5"></textarea>
+			<br>
+			<input type="text" name="">
+			<input type="submit" value="发表留言">
+		</div>
+		<div id="a3">
+			<p>这是浏览留言区域：</p>
+			<div id="a1">
+				用户名	留言时间<br>
+				留言内容
+			</div>
+			<div style="color: blue">
+				用户名	留言时间<br>
+				留言内容
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<p>
+			这是第三个div
+		</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是js基础</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main5.css">
+	<script type="text/javascript" src="javascripy/main5.js"></script>
+</head>
+<body>
+	<div>
+		下面是点赞函数：
+		<br>
+		<button id="like" onclick="like()">点赞是0个</button>
+	</div>
+</body>
+</html>

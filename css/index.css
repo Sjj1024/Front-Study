@@ -1,0 +1,50 @@
+.main{
+	border: 2px;
+	overflow: hidden;
+}
+
+.main .hea{
+	border: 2px solid blue;
+	background: #888;
+	height: 150px;
+}
+
+.main .bod{
+	height: 150px;
+}
+
+.main .foot{
+	height: 150px;
+}
+
+.logo{
+	/*font-size是设置字体大小的*/
+	font-size: 50px;
+	background: #000;
+	/*color是设置字体颜色的*/
+	color: #fff;  
+	padding: 10px;
+
+}
+
+.nav{
+	background: #4268e2;
+	/*使用浮动的时候，可以让容器的宽高自动延伸*/
+	overflow: auto;
+}
+
+.nav a{
+	/*background: #666;*/
+	font-size: 20px;
+	color: #fff;
+	padding: 5px;
+	/*浮动会让元素脱离标签流，自动浮动到上面*/
+	float: left;
+	/*设置去掉超链接的下划线*/
+	text-decoration: none;
+}
+
+a:hover{
+	/*当a标签被选中后，改变背景颜色*/
+	background: orangered;
+}

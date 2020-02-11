@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是转换形式</title>
+	<style type="text/css">
+		.name{
+			animation: name 5s linear infinite;
+			animation-direction: alternate;
+		}
+
+		@keyframes name{
+			0%{
+				/*使用transform可以转变动画方形*/
+				/*scaleX表示只改变x轴方向*/
+				transform: scaleX(1);
+			}
+			/*这个百分比是可以使用小数进行的！*/
+			100%{
+				/*使用transform可以转变动画方形*/
+				transform: scaleX(-1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="name">
+		<img src="img/wei.png">
+	</div>
+</body>
+</html>

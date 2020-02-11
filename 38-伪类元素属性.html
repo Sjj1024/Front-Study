@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是伪类元素使用</title>
+	<style type="text/css">
+    .phoneNumber::before {
+    content:'\260E';
+    font-size: 15px;
+	}
+	/*
+	::befor和：after必须配合content属性来使用;content用来定义插入的内容，content必须有值，至少为空，
+	默认伪类元素display是默认值inline，可以通过设置display属性改变显示样式;
+	*/
+	p::before{
+    content: "《";
+    color: blue;
+	}
+	p::after{
+	    content: "》";
+	    color: blue;
+	}
+	a{
+		/*可以使用attr获取元素属性,然后前后可以加上字符串*/
+		/*content: "<"attr(href)">";*/
+    position: relative;
+    display: inline-block;
+    outline: none;
+    color: #000;
+    text-decoration: none;
+    font-size: 32px;
+    padding: 5px 20px;
+	}
+	a:hover::before, a:hover::after{position: absolute;}
+	a:hover::before{content: ""; left: -10px;}
+	a:hover::after{content: ""; right: -10px;}
+</style>
+</head>
+<body>
+<p class="phoneNumber">12345645654</p>
+<p>平凡的世界</p>
+<a href="www.baidu.com">跳转到百度</a>
+</body>
+</html>

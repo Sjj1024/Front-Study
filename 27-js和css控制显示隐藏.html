@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>元素的显示和隐藏</title>
+	<script type="text/javascript">
+		function pla1(){
+			var name = document.getElementById("name");
+			if (name.style.display == "block"){
+				name.style.display="none";
+			}else if(name.style.display=="none"){
+				name.style.display="block";
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<!-- 使用display控制显示或隐藏,是style中的一个属性 -->
+	<div id="name" style="display: block;">
+		我一串文字
+	</div>
+	<button type="button" onclick="pla1()">按钮</button>
+</body>
+</html>

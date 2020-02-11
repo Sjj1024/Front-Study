@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是动画效果</title>
+	<style type="text/css">
+		.nam{
+			width: 50px;
+			height: 50px;
+
+			/*
+			transition-duration:表示动画时长为多久;
+			transition-delay:表示动画演示多久执行;
+			scale为放大原来的多少倍, 
+			rotate表示旋转多少度
+			translate表示滚动的方向和距离
+			*/
+
+			transition-duration: 5s;
+			/*transition-delay: 2s;*/
+			/*transform: translate(500px);*/
+		}
+		.nam:hover{
+			transform: translate(500px);
+		}
+	</style>
+</head>
+<body>
+	<div class="nam">
+		<img src="img/wei.png">
+	</div>
+</body>
+</html>

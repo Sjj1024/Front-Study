@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是一个jq用法</title>
+	<!-- <meta charset="utf-8"> -->
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+			// jquery简写为$符号，这是最简单的方法
+			// 这里开始写jq代码，$符号相当于get一样
+			// 注意选中元素的方法和css类似，所以使用类获取元素需要用.logo
+			alert($(".logo").html());
+		});
+	</script>
+</head>
+<body>
+	<!-- jq的开始就是写上一个匿名函数，类似于windows.load，先加载网页，再执行这里的代码 -->
+	<p>jq已经集成了通过class获取元素的方法，但是js没有这个功能</p>
+	<div class="logo">1024编程</div>
+</body>
+</html>

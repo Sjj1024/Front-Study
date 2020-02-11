@@ -1,0 +1,12 @@
+body{
+	margin: 0;
+}
+.logo{
+	font-size: 30px;
+	background: #000;
+	color: #fff;
+	padding: 5px;
+}
+#picture img{
+	width: 50%;
+}

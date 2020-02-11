@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .name{
+            width: 100px;
+            height: 100px;
+            background: #333;
+            /* 外边距：上右下左的顺序 */
+            margin: 50px 50px;
+        }
+        .name:hover{
+            width: 100px;
+            height: 100px;
+            background: #999;
+            margin: 50px 50px;
+            /* 会旋转一定的角度,度数可以是负数，表示逆向旋转 */
+            transform: rotate(40deg);
+            /* 放大倍数，上下左右都会放大，但是之前的不会 */
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="name">这次是css使用变换的使用</div>
+</body>
+</html>

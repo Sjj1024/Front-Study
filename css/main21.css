@@ -1,0 +1,17 @@
+/*.move{
+	display: block;
+}*/
+.computer{
+	display: none;
+}
+
+@media(min-width: 300px){
+	/*min-width当宽度大于这个最小宽度就执行这里的代码*/
+	/*max-width当宽度小于这个最小宽度就执行这里的代码*/
+	.move{
+		display: none;
+	}
+	.computer{
+		display: block;
+	}
+}

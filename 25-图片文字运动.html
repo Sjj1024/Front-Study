@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是滚动图片</title>
+	<style type="text/css">
+		marquee{
+			width: 100px;
+			height: 200px;
+		}
+		img{
+			width: 100px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 使用滚动标签marquee，使用direction属性可以控制滚动方向 -->
+	<!-- 设置鼠标放上去后悬停的效果，和鼠标离开后继续运动的效果 -->
+	<!-- behavior="scroll",表示循环滚动，不然的话 -->
+	<!-- scrolldelay="" 表示运动的速度，scrollamout=""表示运动像素，loop表示运动的次数 -->
+	<marquee behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+		<img src="img/1.png">
+		<img src="img/2.png">
+		<img src="img/3.png">
+	</marquee>
+</body>
+</html>

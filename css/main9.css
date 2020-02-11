@@ -1,0 +1,56 @@
+.all{
+	width: 326px;
+	height: 272px;
+	border: 1px solid #777;
+	margin: 0 auto;
+	border-radius: 2px;
+}
+
+.foot{
+	overflow: auto;
+	background: #eeeeee;
+	margin-top: -4px;
+	height: 136px;
+}
+
+.foot .le{
+	width: 108px;
+	float: left;
+}
+
+.le img{
+	width: 50%;
+	margin-top: 40px;
+	margin-left: 40px;
+	border-radius: 50%;
+}
+
+.ce{
+	margin-top: 20px;
+}
+
+.da{
+	width: 140px;
+	height: 25px;
+	border: 1px solid #ccc;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	padding: 3px;
+	margin-right: 4px;
+}
+
+.ce a{
+	color: blue;
+	text-decoration: none;
+}
+
+.rem{
+	margin-top: 5px;
+}
+
+.but{
+	width: 180px;
+	height: 20px;
+	margin-left: 110px;
+	background: #018bb8;
+}

@@ -1,0 +1,43 @@
+.bod{
+	width: 500px;
+	margin: auto;
+}
+
+.datou{
+	background: #ddd;
+	overflow: auto;
+}
+
+.bod img{
+	width: 55%;
+	float: left;
+	margin-right: 5px;
+}
+
+.news{
+	width: 300px;
+	border: 2px solid #ccc;
+	float: left;
+}
+
+.title{
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #ccc;
+}
+
+.title h2{
+	color: cadetblue;
+	margin-bottom: 2px;
+}
+
+.liebiao{
+	margin: 0;
+	padding: 20px;
+}
+
+.liebiao li{
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 5px;
+	color: #666;
+}

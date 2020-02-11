@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是animation动画</title>
+	<style type="text/css">
+		.name{
+			/*设置动画的名字，持续时长，运动方式，循环播放*/
+			animation: name 6s linear infinite;
+/*			animation-name: name;
+			animation-duration: 5s;*/
+			/*设置动画交替播放*/
+			animation-direction: alternate;
+		}
+		@keyframes name{
+			/*设置动画从哪种状态到哪种状态*/
+/*			from{
+
+			}
+			to{
+				margin-left: 500px;
+			}*/
+			/*设置不同状态时的动态效果*/
+		    0% { margin-top: 0px;}
+		   /** 暂停效果 */
+		   10% { margin-top: 0px;}
+		   50% { margin-top: -100px;}
+		   60% { margin-top: -100px;}
+		   90% { margin-top: -200px;}
+		  100% { margin-top: -200px;}
+		}
+	</style>
+</head>
+<body>
+	<div class="name">
+		<img src="img/wei.png">
+	</div>
+</body>
+</html>

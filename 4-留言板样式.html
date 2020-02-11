@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是留言板</title>
+	<style type="text/css">
+		#a4{
+			width: 800px;
+			background: #888888;
+			margin:0px auto; 
+		}
+		.a2{
+			overflow: hidden;
+		}
+		.a2 .content{
+			/*设为798是因为a4是800像素，文本框自带的像素是1，为了整体不溢出，所以*/
+			width: 798px;
+			/*去除内外边距带来的影响*/
+			margin: 0;
+			padding: 0;
+		}
+		.a2 .user{
+			float: left;
+		}
+		.a2 .btn{
+			float: right;
+		}
+		.msg{
+			margin: 20px 0px; padding: 5px;
+			background: #666;
+		}
+		.info{
+			overflow: hidden;
+		}
+		.info .user{
+			float: left;
+			color: blue;
+		}
+		.info .time{
+			float: right;
+			color: #999;
+		}
+		#a3 .content{
+			width: 98.8%;
+		}
+	</style>
+</head>
+<body>
+	<div id="a4">
+		<div class="a2">
+			<p>这是留言框区域：</p>
+			<textarea class="content" cols="50" rows="5"></textarea>
+			<br>
+			<input class="user" type="text" name="">
+			<input class="btn" type="submit" value="发表留言">
+		</div>
+		<hr>
+		<div id="a3">
+			<p>这是浏览留言区域：</p>
+			<div class="msg">
+				<div class="info">
+					<span class="user" >我是用户名</span>
+					<span class="time" >2019-9-10</span>
+				</div>
+				<div class="content">
+					我想说的话是，你真的很牛逼，我很喜欢你
+					我想说的话是，你真的很牛逼，我很喜欢你
+					我想说的话是，你真的很牛逼，我很喜欢你
+				</div>
+			</div>
+			<div class="msg">
+				<div class="info">
+					<span class="user" >我是用户名</span>
+					<span class="time" >2019-9-10</span>
+				</div>
+				<div class="content">
+					我想说的话是，你真的很牛逼，我很喜欢你
+					我想说的话是，你真的很牛逼，我很喜欢你
+					我想说的话是，你真的很牛逼，我很喜欢你
+				</div>
+			</div>
+			<div class="msg">
+				<div class="info">
+					<span class="user" >我是用户名</span>
+					<span class="time" >2019-9-10</span>
+				</div>
+				<div class="content">
+					我想说的话是，你真的很牛逼，我很喜欢你
+					我想说的话是，你真的很牛逼，我很喜欢你
+					我想说的话是，你真的很牛逼，我很喜欢你
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<p>
+			这是第三个div
+		</p>
+	</div>
+</body>
+</html>

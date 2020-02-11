@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是阴影的样式</title>
+	<style type="text/css">
+		.sha{
+			width: 100px;
+			height: 50px;
+			border-radius: 5px;
+			/*background: #ccc;*/
+			/*shadow有多个参数：第一个颜色，第二个x轴，第三个y轴，第四个模糊效果
+			box-shadow 是设置容器的阴影，
+			text-shadow 是设置文本的阴影
+			如果设置x和y都为0，则上下左右会平分这个阴影，
+			*/
+			/*box-shadow: red 0px 0px 5px;*/
+		}
+		.sha:hover{
+			/*设置一个鼠标放上去后的的效果*/
+			box-shadow: red 0px 0px 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="sha">
+		显示阴影效果
+	</div>
+	<br>
+	<div class="sha">
+		显示阴影效果
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是圆角样式</title>
+	<style type="text/css">
+		.up{
+			width: 100px;
+			height: 50px;
+			background: #3366ff;
+			text-align: center;
+			/*设置元素行高等于height，就会让元素垂直居中*/
+			line-height: 50px;
+			color: #fff;
+			/*设置圆角,当只有一个元素的时候，作用于四个角*/
+			/*当有两个参数的时候，第一个参数作用于左上右下，第二个作用于右上左下*/
+			/*如果有四个参数，依次是：左上，右上，右下，左下*/
+			border-radius: 30px 30px;
+
+		}
+		.in{
+			width: 100px;
+			height: 50px;
+			background: #3366ff;
+			text-align: center;
+			/*设置元素行高等于height，就会让元素垂直居中*/
+			line-height: 50px;
+			color: #fff;
+			/*设置圆角,当只有一个元素的时候，作用于四个角*/
+			/*当有两个参数的时候，第一个参数作用于左上右下，第二个作用于右上左下*/
+			/*如果有四个参数，依次是：左上，右上，右下，左下*/
+			border-radius: 10px 30px 50px 80px;
+
+		}
+	</style>
+</head>
+<body>
+	<!-- css样式是可以写多个样式的，使用空格隔开，如果有重复的样式，后面的会覆盖前面的 -->
+	<div class="sigen up">
+		登  陆
+	</div>
+	<div class="in">
+		注 册
+	</div>
+</body>
+</html>

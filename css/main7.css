@@ -1,0 +1,32 @@
+body{
+	margin: 0;
+}
+
+.beijing{
+	/*文字有多大，背景图片就有多大，所以需要设置高度比较好*/
+	background-image: url(../img/1.png);
+	/*width: 200px;*/
+	height: 500px;
+	/*设置背景图片不重复显示*/
+	background-repeat: no-repeat;
+	/*设置位置为相对位置，*/
+	position: relative;
+}
+
+.logo{
+	font-size: 50px;
+	color: #fff;
+}
+
+.foot{
+	text-align: center;
+	color: #fff;
+	/*设置位置为绝对位置，相对父级元素进行的*/
+	position: absolute;
+	/*设置底部边框为0像素*/
+	bottom: 0px;
+	/*line-height可以设置行高*/
+	line-height: 150px;
+	/*设置宽度居中*/
+	width: 100%;
+}

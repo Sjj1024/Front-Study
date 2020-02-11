@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是响应式布局</title>
+	<style type="text/css">
+		ul{
+			/*去掉无序列表的所有风格*/
+			list-style: none;
+		}
+		li{
+			/*设置li标签横向显示，默认是列显示*/
+			display: inline;
+			margin: 5px;
+			font-size: 20px;
+			background: #ccc;
+		}
+
+		li:hover{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<header style="text-align: center; background: #3366ff;">
+		<!-- header自带margin -->
+		<h1>我是标题</h1>
+	</header>
+	<nav style="background: #ccc;">
+		<ul>
+			<!-- 响应式不居中使用到的 这些标签，其实都是div的变种，只是为了有一个更好的语义的 -->
+			<li>我是列表</li>
+			<li>我是列表</li>
+			<li>我是列表</li>
+			<li>我是列表</li>
+			<li>我是列表</li>
+		</ul>
+	</nav>
+	<footer>我是脚部标签</footer>
+</body>
+</html>

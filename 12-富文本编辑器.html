@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是富文本编辑器</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main12.css">
+</head>
+<body>
+	<div class="logo">
+		1024编程
+	</div>
+	<!-- 如果contenteditable设置为true，则这里面的内容是可以被编辑的，不然的话，不允许编辑 -->
+	<div class="edit" contenteditable="true">
+		这里是富文本
+		<p>
+			这里的标签也可以被编辑
+		</p>
+		<div>
+			这里的标签也可以被编辑
+		</div>
+		<!-- 下面的内容就是不可以被编辑的 -->
+		<div class="dont" contenteditable="false">
+			这里的内容是不可以被编辑的
+		</div>
+	</div>
+</body>
+</html>

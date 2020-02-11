@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .name1{
+            background: #888;
+        }
+        /* 当鼠标放上去后，这个动画的过程会持续循环播放， */
+        /* 而那个过渡，只会动一次到终点 */
+        .name1:hover{
+            animation-delay: 200ms;
+            animation-name: wenzi;
+        }
+    </style>
+</head>
+<body>
+    <div class="name1">
+        <!-- 动画的效果是可以让这个变化的过程持续循环 -->
+        我是一个文字
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是阴影效果</title>
+	<style type="text/css">
+		.lin{
+			width: 200px; 
+			height: 150px; 
+			margin: 0 auto;
+			margin-top: 100px;
+			/*
+			创建渐变梯度，线性，从哪个点到哪个点，颜色变换是从哪到那
+			*/
+			background: -webkit-gradient(linear, left top, left bottom, from(#00abeb),to(#618)); 
+			box-shadow: 0 0 20px #aaa; 
+			border-radius: 10px 10px;
+		}
+		.rad{
+			width: 200px;
+			height: 150px;
+			margin: 0 auto;
+			margin-top: 100px;
+			/*
+			创建径向渐变，
+			background-image:-webkit-gradient(radial, 45 45, 10, 52 50, 30, from(#A7D30C), to(rgba(1,159,98,0)), color-stop(90%, #019F62))
+			*/
+			background: -webkit-gradient(radial, 45 45,10,52 50, 30, from(#A7D30C), to(#168), color-stop(50%, #666));
+			box-shadow: 0 0 20px #aaa;
+			border-radius: 10px 10px;
+
+		}
+		.zhong{
+			width: 200px;
+			height: 150px;
+			margin: 0 auto;
+			margin-top: 100px;
+			border-radius: 5px 5px;
+			/*创建过度中间指定颜色*/
+			background: -webkit-gradient(linear, left top, left bottom, from(#ff0), color-stop(0.5, orange),
+				to(#ff0000));
+		}
+		.zhong:hover{
+			box-shadow: 0 0 20px #aaa;
+		}
+		.lin2{
+			width: 200px;
+			height: 150px;
+			margin: 0 auto;
+			margin-top: 100px;
+			border-radius: 5px 5px;
+			/* 必须是颜色在前，位置在后， 位置可以省略，默认会把第一个颜色位置设为0%，最后一个100%*/
+			/*background-image: linear-gradient(red 0%, blue 100%);*/
+			background-image: linear-gradient(red, blue);
+		}
+		.lin2:hover{
+			box-shadow: 0 0 20px #aaa;
+		}
+		.lin3{
+			width: 200px;
+			height: 150px;
+			margin: 0 auto;
+			margin-top: 100px;
+			border-radius: 5px 5px;
+			/*如果渐变只有两种颜色，第一个颜色位置是n%，第二个是m%，则浏览器会将0-n范围设置为第一个颜色纯色，
+			n-m的范围设置为第一个颜色到第二个的过度，m-100范围设置为第二个颜色的纯色
+			*/
+			background-image: linear-gradient(lightyellow 20%, lightgreen 80%);
+		}
+		.lin3:hover{
+			box-shadow: 0 0 20px #aaa;
+		}
+		.lin4{
+			width: 200px;
+			height: 150px;
+			margin: 0 auto;
+			margin-top: 100px;
+			border-radius: 5px 5px;
+			/*
+			如果渐变颜色没有指定位置，则他们会均匀分布
+			*/
+			background-image: linear-gradient(red, yellow, green, blue);
+			background-size: 2em;
+		}
+		.lin4:hover{
+			box-shadow: 0 0 20px #aaa;
+		}
+	</style>
+</head>
+<body>
+	<div class="lin">
+		我是线性渐变
+	</div>
+	<div class="rad">
+		我是径向渐变
+	</div>
+	<div class="zhong">
+		我是含有中间过渡色
+	</div>
+	<div class="lin2">
+		我是linear-gradient线性渐变演示
+	</div>
+	<div class="lin3">
+		我是linear-gradient线性渐变多样化
+	</div>
+	<div class="lin4">
+		我是linear-gradient线性渐变多样化
+	</div>
+</body>
+</html>
