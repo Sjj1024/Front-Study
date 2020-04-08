@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过js获取元素对象并改变内容</title>
+</head>
+<body>
+
+<h1 id="title">通过js更改标签内容，js其实也是增删改查操作</h1>
+<img id="image" src="1.png" alt="我是图片1">
+
+<script>
+
+    function shijian() {
+        // alert("111111111");
+        var image = document.getElementById("image");
+        if (image.flag) {
+            image.src = "2.png";
+            image.flag = false;
+        }else {
+            image.src = "1.png";
+            image.flag = true;
+        }
+    }
+
+    function change() {
+        // 通过id来获取页面元素对象，先将script写到后面，等文档加载完才能获取到内容
+        var title = document.getElementById("title");
+        var image = document.getElementById("image");
+        document.write(title + "----------" + image + "-----------" + image.src);
+        // 先弹一个窗确认是否改变
+        // alert("开始修改内容了，确认么？");
+        title.innerHTML = "不知其美刘强东";
+        image.src = "2.png";
+        image.flag = false;
+        // 这里写点击事件的时候，不用带括号，带括号的是执行方法，不带是引用
+        image.onclick = shijian;
+    }
+    
+    change();
+
+</script>
+
+</body>
+</html>
