@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器模型对象</title>
+</head>
+<body>
+BOM是三个单词首字母缩写：Browser Object Model
+浏览器模型对象：将浏览器的组成分为5个对象：window窗口对象，地址栏对象，历史记录对象，显示屏对象，浏览器对象
+其中比较重要的是:窗口对象，地址栏对象，浏览器对象
+Doc对象其实是包含在BOM中的，但是因为其比较重要，就提出来单独记录了
+<input type="button" value="打开一个窗口" id="openWin">
+<input type="button" value="关闭一个窗口" id="closeWin">
+</body>
+<script>
+    // window对象中常有的方法alert，confirm，使用的时候，windows对象可以省略
+    function tanchuang() {
+        // confirm主要是防止用户的误操作,会返回true和false操作
+        var res = confirm("您确定要退出么？");
+        document.write(res);
+        document.write("<br>");
+        // prompt是弹出一个输入框的操作，返回用户输入的内容
+        var content = prompt("请输入你的密码：");
+        document.write(content);
+    }
+
+    tanchuang();
+
+    function chuangkou() {
+        // 打开一个窗口和关闭一个窗口
+        var openwindows = document.getElementById("openWin");
+        // 定义一个变量，用于获取新打开的窗口对象
+        var newwin;
+        openwindows.onclick = function (ev) {
+            newwin = open("https://www.baidu.com/");
+        };
+
+
+        // 获取关闭窗口按钮对象，并设置关闭窗口方法
+        var closewindows = document.getElementById("closeWin");
+        // close方法是哪个窗口对象调用就关闭哪个窗口
+        closewindows.onclick = function (ev) {
+            newwin.close()
+        };
+
+    }
+    chuangkou();
+</script>
+</html>
