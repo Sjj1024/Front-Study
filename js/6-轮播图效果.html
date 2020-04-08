@@ -9,6 +9,8 @@
     开始执行图片轮播效果:
 </div>
 <img src="img/1.png" id="lunbo">
+<input type="button" value="刷新按钮" id="flush">
+<input type="button" value="连接去百度" id="baidu">
 <script>
     // 定义一个变量，用来记录轮播位置
     var num = 1;
@@ -34,6 +36,20 @@
     }
     // 定义一个定时器对象，循序执行轮播方法
     setInterval(bo, 2000);
+
+    // 通过location对象，可以获取到地址栏对象，然后可以刷新当前页，也可以获取到当前页url
+    var dizhi = location.href;
+    document.write(dizhi);
+    var sxbut = document.getElementById("flush");
+    var bdbut = document.getElementById("baidu");
+    sxbut.onclick = function (ev) {
+        location.reload();
+    };
+    bdbut.onclick = function (ev) {
+        // 可以通过location.href指定当前页跳转到另外页面
+        location.href = "https://www.baidu.com/";
+    };
+
 </script>
 </body>
 </html>
