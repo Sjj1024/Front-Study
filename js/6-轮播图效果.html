@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+<div>
+    开始执行图片轮播效果:
+</div>
+<img src="img/1.png" id="lunbo">
+<script>
+    // 定义一个变量，用来记录轮播位置
+    var num = 1;
+    var imgobj = document.getElementById("lunbo");
+    function bo() {
+        // 判断变量是不是超过3，是的话，恢复1
+        if (num > 5) {
+            num = 1;
+        }
+        // num需要自增加一
+        num++;
+        if (num === 1) {
+            imgobj.src = "img/1.png";
+        }else if (num === 2) {
+            imgobj.src = "img/2.png";
+        }else if (num === 3) {
+            imgobj.src = "img/3.png";
+        }else if (num === 4) {
+            imgobj.src = "img/4.png";
+        }else if (num === 5) {
+            imgobj.src = "img/5.png";
+        }
+    }
+    // 定义一个定时器对象，循序执行轮播方法
+    setInterval(bo, 2000);
+</script>
+</body>
+</html>
