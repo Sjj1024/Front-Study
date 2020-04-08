@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我是第一个测试页</title>
+    <!--<script>-->
+    <!--alert("你好，世界");-->
+    <!--</script>-->
+    <style>
+        td {
+            border: 1px solid;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    我是第一个标签，可以使用标签名加上tab键，自动生成标签。
+    或者使用"<"sty 加上ctrl+shift+enter也可以自动补全
+</div>
+<script>
+    function chengfa() {
+        document.write("<table>");
+        for (i = 1; i <= 9; i++) {
+            document.write("<tr>");
+            for (var j = 1; j <= i; j++) {
+                document.write("<td>");
+                document.write(j + " * " + i + " = " + j * i);
+                // &nbsp表示一个空格
+                document.write("&nbsp&nbsp&nbsp&nbsp");
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    }
+
+    chengfa();
+
+    // 求任意参数的和，并返回
+    document.write("求任意数字的和并返回：<br>");
+
+    function he() {
+        // 任意参数可以使用arguments来获取，arguments是一个数据，存储了传进方法的所有参数
+        // alert(arguments[0]);
+        // 可以使用arguments.for 快速生成一个for循环，获取到的是索引，再通过索引获取数组中元素的值
+        for (var argumentsKey in arguments) {
+            document.write(arguments[argumentsKey]);
+        }
+    }
+
+    he(1, 4, 5);
+
+    // 数组对象array,数组中元素类型可变，也就是不限制元素类型，可以放任意类型的数据到同一个数组中，长度也可以变化
+    document.write("----------------------------------------<br>");
+
+    function shuzu() {
+        var array1 = new Array(1, 4, 5);
+        var array4 = new Array();
+        var array2 = new Array(5);
+        var array3 = [1, 4, 6, 7];
+        // 数组的一些方法和特性
+        document.write(array1.length);
+        // 也可以使用.var获得自动填充后的变量，牛逼的不行啊
+        var s = array3.join("--");
+        document.write(s);
+    }
+
+    shuzu();
+
+    // 日期对象date的使用
+    function riti() {
+        var time = new Date();
+        // 使用tolocalString可以获取到本地时间格式的字符串， 默认是国外时间格式字符串
+        var s = time.toLocaleString();
+        document.write(s + "<br>");
+        // 获取时间戳字符串使用.getTime
+        var time1 = time.getTime();
+        document.write(time1);
+    }
+
+    riti();
+
+    // Math对象，是一个工具类
+    function shuxue() {
+        // math对象不用创建，直接使用就可以
+        document.write(Math.PI);
+        document.write("<br>");
+        // 使用产生随机数0-1之间的随机数,
+        document.write(Math.random());
+        document.write("<br>");
+        // 向上取整和向下取整ceil是天花板的意思，floor是地板的意思
+        document.write(Math.ceil(3.14));
+        document.write("<br>");
+        // 向下取整
+        document.write(Math.floor(3.14));
+        document.write("<br>");
+        // 产生1到100之间的随机数
+        document.write(Math.ceil(Math.random() * 100 + 1));
+    }
+
+    shuxue();
+
+    // RegExp对象，正则表达式对象
+    function zhengze() {
+        var str = "woshiyigechuan 1111111 shuzu";
+        // 正则表达式对象
+        var zheng = new RegExp("\\w*");
+        // 第二种正则表达式表示，以后经常使用这种方法
+        var zheng2 = /\d{, 6}/;
+        // 使用正则的test方法，判断字符串是否符合正则规则,是的话，返回true，不是的话返回false
+        var b = zheng.test(str);
+        document.write(b);
+
+    }
+    zhengze();
+
+</script>
+</body>
+</html>
