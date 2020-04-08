@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局对象</title>
+</head>
+<body>
+<div>
+    全局对象Global
+</div>
+<script>
+    // 全局对象的方法url编码和解码操作，只要用方法就可以，不用写对象名，因为是全局的
+    // url编码和解码
+    function urlma() {
+        var keyworld = "中华人民共和国";
+        var urlworld = encodeURI(keyworld);
+        document.write(urlworld);
+        document.write("<br>");
+
+        // url解码
+        var hanzi = decodeURI(urlworld);
+        document.write(hanzi);
+        document.write("<br>");
+
+        // parseInt会依次将字符串数字部分解析成数字，从不是数字部分开始，解析为NaN
+        var strnum = "124abc";
+        var number = parseInt(strnum);
+        document.write(number);
+        document.write("<br>");
+
+        // isNaN方法：判断是不是非数字的数字类型，因为NaN是六亲不认，连自己也不认识，任何NaN参与的判断，返回都是false
+        var testnum = NaN;
+        document.write(testnum == NaN);
+        document.write("<br>");
+        document.write(isNaN(testnum));
+
+        // eval方法会将js字符串转成js代码执行
+        var jsstr = "alert(111)";
+        eval(jsstr);
+    }
+
+    urlma();
+</script>
+</body>
+</html>
