@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是练习</title>
+	<script src="js/test.js"></script>
+</head>
+<body>
+<input type="text" name="shuru">
+<div>
+	js是增加页面的交互，可以定义在页面的任何位置，而且script标签可以不止一个
+	但行注释使用：// ，多行注释使用：/*多行注释内容*/
+	数据类型：number，string，boolean，null，undefiden类型，
+	变量：一小块存储数据的内存地址
+	强类型：java是强类型，定义变量之前就定义了数据类型，
+	弱类型：var js是弱类型的，定义之前不需要规定数据类型，什么类型都可以
+
+	定义变量的语法：var 变量名 = 值，或者var 变量名；
+	var num = 10;
+</div>
+
+</body>
+<script type="text/javascript">
+	// 但行注释
+	// alert("Hello World");
+	// 数据类型
+	var num = 10;
+	// alert(num);
+	// 将数据写到页面上使用document.write
+	document.write(num + "<br>");
+	var string = "我是字符串";
+	document.write(string + "<br>");
+	var bool = true;
+	document.write(bool + "<br>");
+	var undefind = undefined;
+	document.write(undefind + "<br>");
+
+	// 使用运算符typeof(变量)就可以看到变量的数据类型
+	var str2 = "我是字符串2";
+	document.write(str2 + typeof(str2));
+
+	// js的运算符++/--/+(正号),?:
+	document.write("开始演示运算符:" + "<br>");
+	num++;
+	document.write(++num + "<br>");
+	// 其他类型转num +(),boolean的true会被转成1，false会被转成0，其他格式如果转不成功，会转成NaN（不是数字的数字）
+	var str3 = "1243";
+	document.write(+(str3) + "<br>");
+	document.write(+bool + "我是布尔转成的结果" + "<br>")
+	// 加减乘除运算符
+	var a = 3;
+	var b = 2;
+	document.write(a/b + "<br>")
+	// 比较运算符:类型相同，直接比较；类型不同，先进行类型转换，再进行比较
+</script>
+</html>
