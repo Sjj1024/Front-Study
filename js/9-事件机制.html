@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件机制</title>
+    <script>
+        window.onload = function (ev) {
+            var elementById = document.getElementById("i1");
+            elementById.onblur = function (ev) {
+                // alert("失去焦点了");
+            };
+            elementById.onfocus = function (ev) {
+                // alert("获得焦点");
+            };
+
+            // 测试获得点击事件操作
+            var button1 = document.getElementById("b1");
+            // button1.onclick = function (ev) {
+            //     print("单击了");
+            // };
+            button1.ondblclick = function (ev) {
+                alert("按钮被双击了");
+            };
+            //
+        }
+    </script>
+</head>
+<body>
+事件：DOM 事件允许Javascript在HTML文档元素中注册不同事件处理程序。函数不会在事件前执行，例如点击，双击，鼠标放上，移开等
+事件分为：鼠标事件，键盘事件，表单事件，框架事件，剪切板事件等，
+事件源：按钮，文本输入框等，
+监听器：事件触发后，具体执行的代码
+
+常见的事件：
+1、点击事件
+onclick : 单击事件
+ondblclick ： 双击某个对象时调用的事件
+2、焦点事件
+onblur : 失去焦点
+onfocus : 元素获得焦点
+3、加载事件
+onload : 一张页面或一幅图像完成加载
+通常会使用window对象的onload事件，等整个页面加载完了再出发js代码
+
+4、鼠标事件
+onmousedown:鼠标按钮被按下
+onmouseup:鼠标按钮被松开
+onmousemove:鼠标被移动
+onmouseover:鼠标移到某元素之上
+onmouseout:鼠标从元素移开
+
+5、键盘事件
+onkeydown: 某个键盘按钮被按下
+onkeyup: 某个键盘按钮被松开
+onkeypress: 某个键盘按钮被按下并松开
+
+6、选择和改变
+onchange: 域的内容被改变，
+onselect：文本被选中
+
+7、表单事件
+onsubmit: 确认按钮被点击
+onreset: 重置按钮被点击
+<br>
+<input type="text" value="输入框" id="i1">
+<input type="button" value="按钮事件" id="b1">
+
+</body>
+</html>
