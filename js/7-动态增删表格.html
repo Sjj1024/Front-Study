@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态列表添加和删除元素</title>
+    <style>
+        #table_list{
+            /*background:red;*/
+            position: absolute;
+            width: 600px;
+            left:50%;
+            top:30%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+        }
+
+        table{
+            border: 1px solid gray;
+            width: 600px;
+            border-collapse: collapse;
+        }
+
+        td, th{
+            border: 1px solid gray;
+        }
+
+    </style>
+</head>
+<body>
+<div id="table_list">
+    <h3>
+        下面是动态在列表中添加和删除元素：
+    </h3>
+    编号：<input type="text" name="bianhao" style="width:80px; border: 2px solid gray;">
+    姓名：<input type="text" name="xingming" style="width:80px; border: 2px solid gray;">
+    年龄：<input type="text" name="nianling" style="width:80px; border: 2px solid gray;">
+    性别：<input type="text" name="xingbie" style="width:80px; border: 2px solid gray;">
+    <input type="button" name="addbut" value="添加" onclick="additem()">
+    <br>
+    <br>
+    <table id="content_list">
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>王思聪</td>
+            <td>18</td>
+            <td>男</td>
+            <td><a href="javascript:void(0)" onclick="delitem(this)">删除</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>王健林</td>
+            <td>46</td>
+            <td>男</td>
+            <td><a href="javascript:void(0)" onclick="delitem(this)">删除</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>赵丽颖</td>
+            <td>18</td>
+            <td>女</td>
+            <!--a标签中onclick传递的this表示标签自己-->
+            <td><a href="javascript:void(0)" onclick="delitem(this)">删除</a></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function additem() {
+        // 获取输入内容,getElementsByName获取到的是一个数组，，，坑啊
+        var bianhao = document.getElementsByName("bianhao")[0].value;
+        var xingming = document.getElementsByName("xingming")[0].value;
+        var nianling = document.getElementsByName("nianling")[0].value;
+        var xingbie = document.getElementsByName("xingbie")[0].value;
+        // 创建4个td标签，将获取到的内容填进去
+        var bianhao_td = document.createElement("td");
+        bianhao_td.innerHTML = bianhao;
+        var xingming_td = document.createElement("td");
+        xingming_td.innerHTML = xingming;
+        var nianling_td = document.createElement("td");
+        nianling_td.innerHTML = nianling;
+        var xingbie_td = document.createElement("td");
+        xingbie_td.innerHTML = xingbie;
+        var del_td = document.createElement("td");
+        var a_tab = document.createElement("a");
+        a_tab.innerHTML = "删除";
+        a_tab.setAttribute("href", "javascript:void(0)");
+        a_tab.setAttribute("onclick", "delitem(this)");
+        del_td.appendChild(a_tab);
+        // 创建一个tr标签，将上面四个标签添加进入
+        var add_tr = document.createElement("tr");
+        add_tr.appendChild(bianhao_td);
+        add_tr.appendChild(xingming_td);
+        add_tr.appendChild(nianling_td);
+        add_tr.appendChild(xingbie_td);
+        add_tr.appendChild(del_td);
+        // 找到table标签， 将addtr标签添加进入
+        var content_list = document.getElementById("content_list");
+        content_list.appendChild(add_tr);
+    }
+
+    function delitem(a_obj) {
+        // 删除元素,先得获取到元素
+        var res = confirm("确定删除元素么？");
+        // alert(a_obj.innerHTML);
+        if (res) {
+            var tr_obj = a_obj.parentNode.parentNode;
+            var table_obj = tr_obj.parentNode;
+            table_obj.removeChild(tr_obj);
+        }
+    }
+</script>
+</body>
+</html>
