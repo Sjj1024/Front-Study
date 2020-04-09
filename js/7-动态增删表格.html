@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <title>动态列表添加和删除元素</title>
     <style>
-        #table_list{
+        #table_list {
             /*background:red;*/
             position: absolute;
             width: 600px;
-            left:50%;
-            top:30%;
+            left: 50%;
+            top: 30%;
             transform: translate(-50%, -50%);
             padding: 10px;
         }
 
-        table{
+        table {
             border: 1px solid gray;
             width: 600px;
             border-collapse: collapse;
         }
 
-        td, th{
+        td, th {
             border: 1px solid gray;
         }
 
@@ -35,7 +35,7 @@
     姓名：<input type="text" name="xingming" style="width:80px; border: 2px solid gray;">
     年龄：<input type="text" name="nianling" style="width:80px; border: 2px solid gray;">
     性别：<input type="text" name="xingbie" style="width:80px; border: 2px solid gray;">
-    <input type="button" name="addbut" value="添加" onclick="additem()">
+    <input type="button" name="addbut" value="添加" onclick="addhtml()">
     <br>
     <br>
     <table id="content_list">
@@ -102,6 +102,23 @@
         // 找到table标签， 将addtr标签添加进入
         var content_list = document.getElementById("content_list");
         content_list.appendChild(add_tr);
+    }
+
+    function addhtml() {
+        var bianhao = document.getElementsByName("bianhao")[0].value;
+        var xingming = document.getElementsByName("xingming")[0].value;
+        var nianling = document.getElementsByName("nianling")[0].value;
+        var xingbie = document.getElementsByName("xingbie")[0].value;
+        // 使用innerHTML向table后方添加元素
+        var content_list = document.getElementById("content_list");
+        content_list.innerHTML += '        <tr>\n' +
+            '            <td>'+bianhao+'</td>\n' +
+            '            <td>'+xingming+'</td>\n' +
+            '            <td>'+nianling+'</td>\n' +
+            '            <td>'+xingbie+'</td>\n' +
+            '            <!--a标签中onclick传递的this表示标签自己-->\n' +
+            '            <td><a href="javascript:void(0)" onclick="delitem(this)">删除</a></td>\n' +
+            '        </tr>'
     }
 
     function delitem(a_obj) {
