@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制样式</title>
+    <style>
+        .div1{
+            border: 2px solid red;
+        }
+
+        .div2{
+            border: 2px solid red;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+两种方式：
+1、每个元素都有一个style对象，通过style对象，可以获取到样式属性，直接修改属性的值，就可以改变样式
+<div id="div1">
+    我是标签1
+</div>
+
+<div id="div2">
+    我是标签2
+</div>
+
+<script>
+    var div1 = document.getElementById("div1");
+    div1.onclick = function (ev) {
+        div1.style.border = "2px solid red";
+        // 如果是用中横线连接起来的元素属性，需要将中横线去掉，并且使用后面的单词大写
+        div1.style.fontSize = "10px";
+    };
+
+    // 第二种方法，通过修改class属性，改变预先设计好的样式
+    var div2 = document.getElementById("div2");
+    div2.onclick = function (ev) {
+        // div2.className = "div2";
+        div2.setAttribute("class", "div2");
+    };
+</script>
+</body>
+</html>
