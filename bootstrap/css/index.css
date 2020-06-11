@@ -1,0 +1,147 @@
+/* 手动修改container宽度 */
+
+@media (min-width: 1170px){
+    .container{
+        max-width: 1480px;
+    }
+}
+
+header{
+    /* 加上!important后权重变为10000了，
+    style样式权重是1000，
+    id选择器权重是100，
+    class权重是10
+    标签是1
+    */
+    padding-left: 0px !important;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav{
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav a{
+    color:grey;
+    display: block;
+    /* 高度固定，再设置一个行高，就会垂直居中 */
+    height: 50px;
+    line-height: 50px;
+    /* 因为元素左边有一段空白，所以设置一个内边距 */
+    padding-left: 30px;
+}
+
+.nav a:hover{
+    color: rgb(53, 50, 50);
+    background-color: #fff;
+}
+
+a{
+    /* 让a标签的下划线没有 */
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a::before{
+    /* 伪类元素的使用：在元素的css前加上相应的图标 */
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.new li{
+    float: left;
+    list-style: none;
+    width: 25%;
+    height: 123px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.new li:nth-child(1){
+    width: 50%;
+    height: 266px;
+}
+
+.new li a img{
+    width: 100%;
+    height: 100%;
+}
+
+.new li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+}
+
+.new li p{
+    position: absolute;
+    width: 100%;
+    background-color:rgba(228, 10, 10, 0.884);
+    font-size: 12px;
+    bottom: 0;
+    left: 0;
+    height: 41px;
+    color: #fff;
+    /* 因为p标签默认有一个底部外边距 */
+    margin-bottom: 0;
+    padding-left: 5px;
+    /* line-height: 41px; */
+}
+
+.new li:nth-child(1) p{
+    font-size: 18px;
+    line-height: 41px;
+    padding-left: 10px;
+}
+
+.publish{
+    border-top: 1px solid #555;
+}
+
+.pic a img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mainart{
+    padding-right: 0;
+}
+
+.pic{
+    padding: 0;
+}
+
+.banner a img{
+    width: 100%;
+}
+
+.hot{
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 0px 10px 10px 10px;
+}
+
+.hot span{
+    margin-left: 20px;
+    border-radius: 0;
+}
+
+.hot p{
+    font-size: 12px;
+}
