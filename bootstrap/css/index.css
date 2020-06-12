@@ -16,8 +16,36 @@ header{
     padding-left: 0px !important;
 }
 
+.logo{
+    background-color: skyblue;
+}
+
 .logo img{
+    /* width: 100%; */
+    max-width: 100%;
+}
+
+.fontlogo{
+    /* display: block; */
     width: 100%;
+    font-size: 20px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* 使用媒体查询修改菜单栏：在小屏下显示显示样式 */
+@media(max-width:768px){
+    /* max-width是当屏幕小于这个尺寸时就执行的样式 */
+    .nav li{
+        float: left;
+        width: 20%;
+    }
+    
+    .nav li a{
+        padding-left: 5px;
+    }
 }
 
 .nav ul{
